@@ -1,0 +1,9 @@
+.arrivals {
+    padding: 3rem 0;
+    &__title {
+        color: $text-color;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+    }
+}

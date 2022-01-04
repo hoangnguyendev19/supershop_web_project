@@ -1,0 +1,26 @@
+.banner {
+    &__slider {
+        @include size(100%, auto);
+        position: relative;
+        .slick-prev, .slick-next {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            font-size: 3rem;
+            border: 0;
+            outline: 0;
+            background-color: rgba(255, 255, 255, 0.452);
+            z-index: 9;
+        }
+        .slick-next {
+            right: 0;
+            left: auto;
+        }
+    }
+    &__item {
+        img {
+            width: 100vw;
+        }
+    }
+}

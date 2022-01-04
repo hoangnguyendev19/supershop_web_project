@@ -1,0 +1,10 @@
+.banner {
+    &__slider {
+        @include size(100%, auto);
+    }
+    &__item {
+        img {
+            width: 100vw;
+        }
+    }
+}

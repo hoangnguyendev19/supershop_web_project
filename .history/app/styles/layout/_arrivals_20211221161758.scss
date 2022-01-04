@@ -1,0 +1,221 @@
+.arrivals {
+    background-color: $bg-color;
+    padding: 3rem 0;
+    &__title {
+        color: $text-color;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    &__list {
+        @include flexBox(stretch);
+        margin-left: -1rem;
+    }
+    &__item {
+        width: calc(25% - 1rem);
+        padding: 1rem;
+        margin-left: 1rem;
+        background-color: white;
+        position: relative;
+        transition: all 0.25s linear;
+    }
+    &__item:hover {
+        box-shadow: 0 0 10px 5px $text-desc-color;
+    }
+    &__link {
+        display: block;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: $text-color;
+        margin: 2rem 0;
+        transition: all 0.25s linear;
+        text-transform: uppercase;
+    }
+    &__link:hover {
+        color: $primary-color;
+    }
+    &__price {
+        @include flexBox(center, space-between);
+        &-money {
+            display: inline-block;
+            font-size: 1.8rem;
+            color: $primary-color;
+        }
+        &-btn {
+            display: inline-block;
+            padding: 5px 8px;
+            color: $text-desc-color;
+            text-transform: uppercase;
+            background-color: white;
+            font-size: 1.4rem;
+            outline: none;
+            border: 1px solid $border-color;
+            transition: all 0.25s linear;
+        }
+        &-btn:hover {   
+            color: white;
+            background-color: $primary-color;
+            border-color: $primary-color;
+        }
+    }
+    &__sale {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 6;
+    }
+    &__new {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 6;
+    }
+    &__box {
+        position: relative;
+    }
+    &__more {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: transparent;
+        transition: all 0.25s linear;
+        z-index: 4;
+        @include flexBox(center, center);
+        &-add {
+            border: 1px solid white;
+            color: white;
+            font-size: 1.3rem;
+            padding: 5px 8px;
+            transition: all 0.25s linear;
+            visibility: hidden;
+            opacity: 0;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        &-add:first-child {
+            margin-right: 5px;
+        }
+        &-add:hover {
+            background-color: $primary-color;
+            border-color: $primary-color;
+        }
+    }
+    &__more:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    &__more:hover .arrivals__more-add {
+        visibility: visible;
+        opacity: 1;
+    }
+    &__more:hover .arrivals__item {
+        box-shadow: 5px 5px 5px 5px $text-color;
+    }
+    // Zoom
+    .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 999999;
+        background-color: rgba(0, 0, 0, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+        &__content {
+            width: 100%;
+            max-width: 40rem;
+            padding: 2rem;
+            border-radius: 20px;
+            position: relative;
+            background-color: #fff;
+        }
+        &__close {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 10rem;
+            background-color: black;
+            font-size: 2rem;
+            color: white;
+            border: 2px solid white;
+            cursor: pointer;
+        }
+    }
+    // View
+    .view {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 999999;
+        background-color: rgba(0, 0, 0, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+        &__content {
+            @include size(100%);
+            max-width: 80rem;
+            max-height: 60rem;
+            padding: 2rem;
+            border-radius: 20px;
+            position: relative;
+            background-color: #fff;
+        }
+        &__close {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 10rem;
+            background-color: black;
+            font-size: 2rem;
+            color: white;
+            border: 2px solid white;
+            cursor: pointer;
+        }
+        &__box {
+            @include flexBox(stretch, center);
+            @include size(100%);
+        }
+        &__image {
+            width: calc(50% - 2rem);
+            margin-right: 2rem;
+            &-top {
+                @include size(30rem , 40rem);
+                margin-bottom: 2rem;
+                img {
+                    max-height: 40rem;
+                }
+            }
+            &-bottom {
+                @include flexBox(stretch, flex-start);
+            }
+            &-img {
+                @include size(10rem, auto);
+                margin-right: 2rem;
+            }
+        }
+        &__info {
+            width: calc(50% - 2rem);
+            margin-left: 2rem;
+        }
+    }
+}

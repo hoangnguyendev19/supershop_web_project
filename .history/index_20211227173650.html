@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./app/reset.css">
+    <link rel="stylesheet" href="./app/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@400;600;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__top">
+                    <div class="header__info">
+                        <ul class="header__info-list">
+                            <li class="header__info-item">
+                                <i class="fas fa-phone-alt"></i>
+                                <span>+1 456 6717</span>
+                            </li>
+                            <li class="header__info-item">
+                                <a href="#" class="header__info-money">€</a>
+                                <a href="#" class="header__info-money">£</a>
+                                <a href="#" class="header__info-money header__info--red">$</a>
+                            </li>
+                            <li class="header__info-item">
+                                <a href="#" class="header__info-language">English</a>
+                                <ul class="header__info-box">
+                                    <li>
+                                        <a href="#" class="header__info-other">French</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="header__info-other">Germany</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="header__info-other">Turkish</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__user">
+                        <ul class="header__user-list">
+                            <li class="header__user-item">
+                                <a href="" class="header__user-link">My Account</a>
+                            </li>
+                            <li class="header__user-item">
+                                <a href="" class="header__user-link">My Wishlist</a>
+                            </li>
+                            <li class="header__user-item">
+                                <a href="" class="header__user-link">Checkout</a>
+                            </li>
+                            <li class="header__user-item">
+                                <a href="" class="header__user-link">Log In</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header__bottom">
+                    <div class="header__logo">
+                        <a href="#">
+                            <img src="./app/images/img-logo-shop.png" alt="">
+                        </a>
+                    </div>
+                    <ul class="header__menu">
+                        <li class="header__menu-item woman">
+                            <a href="#" class="header__menu-link">Woman</a>
+                            <ul class="header__menu-woman">
+                                <li class="header__menu-box">
+                                    <a class="header__menu-linked" href="#">Running Shoes</a>
+                                </li>
+                                <li class="header__menu-box header__menu-boxes">
+                                    <a class="header__menu-linked" href="#">Hi Tops</a>
+                                    <i class="fas fa-angle-right"></i>
+                                    <ul>
+                                        <li>
+                                            <a class="header__menu-linking" href="#">Model 1</a>
+                                        </li>
+                                        <li>
+                                            <a class="header__menu-linking" href="#">Model 2</a>
+                                        </li>
+                                        <li>
+                                            <a class="header__menu-linking" href="#">Model 3</a>
+                                        </li>
+                                        <li>
+                                            <a class="header__menu-linking" href="#">Model 4</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="header__menu-box">
+                                    <a class="header__menu-linked" href="#">Jackets and Coats</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">Man</a>
+                            <div class="header__menu-man">
+                                <ul>
+                                    <li>
+                                        <span>Footwear</span>
+                                        <a href="#">Astro Trainers</a>
+                                        <a href="#">Basketball Shoes</a>
+                                        <a href="#">Boots</a>
+                                        <a href="#">Canvas Shoes</a>
+                                        <a href="#">Football Boots</a>
+                                        <a href="#">Golf Shoes</a>
+                                        <a href="#">Hi Tops</a>
+                                        <a href="#">Indoor and Court Trainers</a>
+                                    </li>
+                                    <li>
+                                        <span>Clothing</span>
+                                        <a href="#">Base Layer</a>
+                                        <a href="#">Character</a>
+                                        <a href="#">Chinos</a>
+                                        <a href="#">Combats</a>
+                                        <a href="#">Cricket Clothing</a>
+                                        <a href="#">Fleeces</a>
+                                        <a href="#">Gilets</a>
+                                        <a href="#">Golf Tops</a>
+                                    </li>
+                                    <li>
+                                        <span>Accessories</span>
+                                        <a href="#">Belts</a>
+                                        <a href="#">Caps</a>
+                                        <a href="#">Gloves, Hats and Scarves</a>
+                                    </li>
+                                    <li>
+                                        <span>Clearance</span>
+                                        <a href="#">Jackets</a>
+                                        <a href="#">Bottoms</a>
+                                    </li>
+                                </ul>
+                                <div>
+                                    <img src="./app/images/img-twoitems-brand-1.jpg" alt="">
+                                    <img src="./app/images/img-twoitems-brand-2.jpg" alt="">
+                                    <img src="./app/images/img-twoitems-brand-3.jpg" alt="">
+                                    <img src="./app/images/img-twoitems-brand-4.jpg" alt="">
+                                    <img src="./app/images/img-twoitems-brand-5.jpg" alt="">
+                                    <img src="./app/images/img-twoitems-brand-6.jpg" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">Kids</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">New</a>
+                            <ul class="header__menu-new">
+                                <li>
+                                    <img src="./app/images/img-arrivals-model-1.jpg" alt="">
+                                    <h4>Berry Lace Dress</h4>
+                                    <div class="header__menu-price">
+                                        <span>$29.00</span>
+                                        <a href="#">Add to cart</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="./app/images/img-arrivals-model-2.jpg" alt="">
+                                    <h4>Berry Lace Dress</h4>
+                                    <div class="header__menu-price">
+                                        <span>$29.00</span>
+                                        <a href="#">Add to cart</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="./app/images/img-arrivals-model-3.jpg" alt="">
+                                    <h4>Berry Lace Dress</h4>
+                                    <div class="header__menu-price">
+                                        <span>$29.00</span>
+                                        <a href="#">Add to cart</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="./app/images/img-arrivals-model-4.jpg" alt="">
+                                    <h4>Berry Lace Dress</h4>
+                                    <div class="header__menu-price">
+                                        <span>$29.00</span>
+                                        <a href="#">Add to cart</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__menu-item pages">
+                            <a href="#" class="header__menu-link">Pages</a>
+                            <ul class="header__menu-pages">
+                                <li>
+                                    <a href="#">Home Default</a>
+                                </li>
+                                <li>
+                                    <a href="#">Home Default</a>
+                                </li>
+                                <li>
+                                    <a href="#">Home Default</a>
+                                </li>
+                                <li>
+                                    <a href="#">Home Default</a>
+                                </li>
+                                <li>
+                                    <a href="#">Home Default</a>
+                                </li>
+                                <li>
+                                    <a href="#">Home Default</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link">Admin Theme</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <i class="header__menu- fas fa-search"></i>
+                            <div class="header__menu-search">
+                                <input class="header__menu-input" placeholder="Search">
+                                <button class="header__menu-btn">Search</button>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="header__buy">
+                        <a href="#" class="header__buy-link">3 items</a>
+                        <a href="#" class="header__buy-link">$1260</a>
+                        <i class="header__buy-icon fas fa-shopping-cart"></i>
+                        <div class="header__buy-cart">
+                            <ul class="header__buy-list">
+                                <li>
+                                    <img src="./app/images/img-header-buy-cart.jpg" alt="">
+                                    <span>x 1</span>
+                                    <a href="#">Rolex Classic Watch</a>
+                                    <span>$1230</span>
+                                    <i class="fas fa-times-circle"></i>
+                                </li>
+                                <li>
+                                    <img src="./app/images/img-header-buy-cart.jpg" alt="">
+                                    <span>x 1</span>
+                                    <a href="#">Rolex Classic Watch</a>
+                                    <span>$1230</span>
+                                    <i class="fas fa-times-circle"></i>
+                                </li>
+                                <li>
+                                    <img src="./app/images/img-header-buy-cart.jpg" alt="">
+                                    <span>x 1</span>
+                                    <a href="#">Rolex Classic Watch</a>
+                                    <span>$1230</span>
+                                    <i class="fas fa-times-circle"></i>
+                                </li>
+                                <li>
+                                    <img src="./app/images/img-header-buy-cart.jpg" alt="">
+                                    <span>x 1</span>
+                                    <a href="#">Rolex Classic Watch</a>
+                                    <span>$1230</span>
+                                    <i class="fas fa-times-circle"></i>
+                                </li>
+                                <li>
+                                    <img src="./app/images/img-header-buy-cart.jpg" alt="">
+                                    <span>x 1</span>
+                                    <a href="#">Rolex Classic Watch</a>
+                                    <span>$1230</span>
+                                    <i class="fas fa-times-circle"></i>
+                                </li>
+                                <li>
+                                    <img src="./app/images/img-header-buy-cart.jpg" alt="">
+                                    <span>x 1</span>
+                                    <a href="#">Rolex Classic Watch</a>
+                                    <span>$1230</span>
+                                    <i class="fas fa-times-circle"></i>
+                                </li>
+                                <li>
+                                    <img src="./app/images/img-header-buy-cart.jpg" alt="">
+                                    <span>x 1</span>
+                                    <a href="#">Rolex Classic Watch</a>
+                                    <span>$1230</span>
+                                    <i class="fas fa-times-circle"></i>
+                                </li>
+                                <li>
+                                    <img src="./app/images/img-header-buy-cart.jpg" alt="">
+                                    <span>x 1</span>
+                                    <a href="#">Rolex Classic Watch</a>
+                                    <span>$1230</span>
+                                    <i class="fas fa-times-circle"></i>
+                                </li>
+                                <li>
+                                    <img src="./app/images/img-header-buy-cart.jpg" alt="">
+                                    <span>x 1</span>
+                                    <a href="#">Rolex Classic Watch</a>
+                                    <span>$1230</span>
+                                    <i class="fas fa-times-circle"></i>
+                                </li>
+                            </ul>
+                            <div class="header__buy-btn">
+                                <button>View cart</button>
+                                <button>Checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__bar">
+                        <i class="header__bar-nav fas fa-bars"></i>
+                        <div class="header__bar-menu">
+                            <div>
+                                <i class="header__bar-closed fas fa-times"></i>
+                            </div>
+                            <ul class="header__bar-top">
+                                <li class="header__bar-item">
+                                    <a href="#">woman</a>
+                                </li>
+                                <li class="header__bar-item">
+                                    <a href="#">man</a>
+                                </li>
+                                <li class="header__bar-item">
+                                    <a href="#">kids</a>
+                                </li>
+                                <li class="header__bar-item">
+                                    <a href="#">new</a>
+                                </li>
+                                <li class="header__bar-item">
+                                    <a href="#">pages</a>
+                                </li>
+                                <li class="header__bar-item">
+                                    <a href="#">admin theme</a>
+                                </li>
+                            </ul>
+                            <div class="header__bar-bottom">
+                                <i class="header__bar-buy fas fa-shopping-cart"></i>
+                                <div class="header__bar-search">
+                                    <input type="text" placeholder="Tìm kiếm">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="banner">
+                <div class="banner__slider">
+                    <div class="banner__item banner__item-designed">
+                        <img src="./app/images/img-banner-1.jpg" alt="">
+                        <div class="banner__item-content">
+                            <h1>Tone of <br><span>Shop ui features</span><br>designed</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem velit vitae rerum alias facilis quas.</p>
+                        </div>
+                    </div>
+                    <div class="banner__item banner__item-unlimited">
+                        <img src="./app/images/img-banner-2.jpg" alt="">
+                        <div class="banner__item-sale">
+                            <h2>Unlimited</h2>
+                            <h4>Layout Options</h4>
+                            <h3>Fully Responsive</h3>
+                            <a href="#">See more details</a>
+                            <div class="banner__item-sale-off">
+                                <h5>from</h5>
+                                <h5>$<span>399</span></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner__item banner__item-admin">
+                        <img src="./app/images/img-banner-3.jpg" alt="">
+                        <div class="banner__item-info">
+                            <h2>Full admin & Frontend</h2>
+                            <h3>eCommerce UI</h3>
+                            <h2>Is ready for your project</h2>
+                        </div>
+                    </div>
+                    <div class="banner__item banner__item-wanted">
+                        <img src="./app/images/img-banner-4.jpg" alt="">
+                        <div class="banner__item-title">
+                            <h2>The most wanted bijouterie</h2>
+                            <a href="#">but it now !</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="arrivals">
+                <div class="container">
+                    <h2 class="arrivals__title">New Arrivals</h2>
+                    <div class="arrivals__list">
+                        <div class="arrivals__item">
+                            <div class="arrivals__box">
+                                <img src="./app/images/img-arrivals-model-1.jpg" alt="" class="arrivals__image">
+                                <div class="arrivals__more">
+                                    <div>
+                                        <span class="arrivals__more-add arrivals__zoom">zoom</span>
+                                        <span class="arrivals__more-add arrivals__view">view</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="arrivals__link">Berry lace Dress</a>
+                            <div class="arrivals__price">
+                                <span class="arrivals__price-money">$29.00</span>
+                                <button class="arrivals__price-btn">add to cart</button>
+                            </div>
+                            <img src="./app/images/img-arrivals-sale.png" alt="" class="arrivals__sale">
+                        </div>
+                        <div class="arrivals__item">
+                            <div class="arrivals__box">
+                                <img src="./app/images/img-arrivals-model-2.jpg" alt="" class="arrivals__image">
+                                <div class="arrivals__more">
+                                    <div>
+                                        <span class="arrivals__more-add arrivals__zoom">zoom</span>
+                                        <span class="arrivals__more-add arrivals__view">view</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="arrivals__link">Berry lace Dress</a>
+                            <div class="arrivals__price">
+                                <span class="arrivals__price-money">$29.00</span>
+                                <button class="arrivals__price-btn">add to cart</button>
+                            </div>
+                        </div>
+                        <div class="arrivals__item">
+                            <div class="arrivals__box">
+                                <img src="./app/images/img-arrivals-model-3.jpg" alt="" class="arrivals__image">
+                                <div class="arrivals__more">
+                                    <div>
+                                        <span class="arrivals__more-add arrivals__zoom">zoom</span>
+                                        <span class="arrivals__more-add arrivals__view">view</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="arrivals__link">Berry lace Dress</a>
+                            <div class="arrivals__price">
+                                <span class="arrivals__price-money">$29.00</span>
+                                <button class="arrivals__price-btn">add to cart</button>
+                            </div>
+                        </div>
+                        <div class="arrivals__item">
+                            <div class="arrivals__box">
+                                <img src="./app/images/img-arrivals-model-4.jpg" alt="" class="arrivals__image">
+                                <div class="arrivals__more">
+                                    <div>
+                                        <span class="arrivals__more-add arrivals__zoom">zoom</span>
+                                        <span class="arrivals__more-add arrivals__view">view</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="arrivals__link">Berry lace Dress</a>
+                            <div class="arrivals__price">
+                                <span class="arrivals__price-money">$29.00</span>
+                                <button class="arrivals__price-btn">add to cart</button>
+                            </div>
+                            <img src="./app/images/img-arrivals-new.png" alt="" class="arrivals__new">
+                        </div>
+                        <div class="arrivals__item">
+                            <div class="arrivals__box">
+                                <img src="./app/images/img-arrivals-model-5.jpg" alt="" class="arrivals__image">
+                                <div class="arrivals__more">
+                                    <div>
+                                        <span class="arrivals__more-add arrivals__zoom">zoom</span>
+                                        <span class="arrivals__more-add arrivals__view">view</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="arrivals__link">Berry lace Dress</a>
+                            <div class="arrivals__price">
+                                <span class="arrivals__price-money">$29.00</span>
+                                <button class="arrivals__price-btn">add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="threeitems">
+                <div class="container">
+                    <div class="threeitems__wrapper">
+                        <div class="threeitems__sidebar">
+                            <ul class="threeitems__list">
+                                <li class="threeitems__item">
+                                    <a href="#" class="threeitems__link">
+                                        <i class="threeitems__icon fas fa-angle-right"></i>
+                                        sports
+                                    </a>
+                                </li>
+                                <div class="threeitems__content">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Item 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Item 2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Item 3</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Item 4</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <li class="threeitems__item">
+                                    <a href="#" class="threeitems__link">
+                                        <i class="threeitems__icon fas fa-angle-right"></i>
+                                        sports
+                                    </a>
+                                </li>
+                                <div class="threeitems__content">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Item 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Item 2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Item 3</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <li class="threeitems__item">
+                                    <a href="#" class="threeitems__link">
+                                        <i class="threeitems__icon fas fa-angle-right"></i>
+                                        sports
+                                    </a>
+                                </li>
+                                <div class="threeitems__content">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Item 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Item 2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Item 3</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <li class="threeitems__item">
+                                    <a href="#" class="threeitems__link">
+                                        <i class="threeitems__icon fas fa-angle-right"></i>
+                                        sports
+                                    </a>
+                                </li>
+                                <div class="threeitems__content">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Item 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Item 2</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <li class="threeitems__item">
+                                    <a href="#" class="threeitems__link">
+                                        <i class="threeitems__icon fas fa-angle-right"></i>
+                                        sports
+                                    </a>
+                                </li>
+                                <div class="threeitems__content">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Item 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Item 2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Item 3</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <li class="threeitems__item">
+                                    <a href="#" class="threeitems__link">
+                                        <i class="threeitems__icon fas fa-angle-right"></i>
+                                        sports
+                                    </a>
+                                </li>
+                                <div class="threeitems__content">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Item 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Item 2</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <li class="threeitems__item">
+                                    <a href="#" class="threeitems__link">
+                                        <i class="threeitems__icon fas fa-angle-right"></i>
+                                        sports
+                                    </a>
+                                </li>
+                                <div class="threeitems__content">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Item 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Item 2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Item 3</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <li class="threeitems__item">
+                                    <a href="#" class="threeitems__link">
+                                        <i class="threeitems__icon fas fa-angle-right"></i>
+                                        sports
+                                    </a>
+                                </li>
+                                <div class="threeitems__content">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Item 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Item 2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Item 3</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                        </div>
+                        <div class="threeitems__container">
+                            <h2 class="arrivals__title">Three Items</h2>
+                            <div class="arrivals__list">
+                                <div class="threeitems__box arrivals__item">
+                                    <div class="arrivals__box">
+                                        <img src="./app/images/img-threeitems-model-1.jpg" alt="" class="arrivals__image">
+                                        <div class="arrivals__more">
+                                            <div>
+                                                <span class="arrivals__more-add arrivals__zoom">zoom</span>
+                                                <span class="arrivals__more-add arrivals__view">view</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="arrivals__link">Berry lace Dress</a>
+                                    <div class="arrivals__price">
+                                        <span class="arrivals__price-money">$29.00</span>
+                                        <button class="arrivals__price-btn">add to cart</button>
+                                    </div>
+                                    <img src="./app/images/img-arrivals-sale.png" alt="" class="arrivals__sale">
+                                </div>
+                                <div class="threeitems__box arrivals__item">
+                                    <div class="arrivals__box">
+                                        <img src="./app/images/img-threeitems-model-2.jpg" alt="" class="arrivals__image">
+                                        <div class="arrivals__more">
+                                            <div>
+                                                <span class="arrivals__more-add arrivals__zoom">zoom</span>
+                                                <span class="arrivals__more-add arrivals__view">view</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="arrivals__link">Berry lace Dress</a>
+                                    <div class="arrivals__price">
+                                        <span class="arrivals__price-money">$29.00</span>
+                                        <button class="arrivals__price-btn">add to cart</button>
+                                    </div>
+                                </div>
+                                <div class="threeitems__box arrivals__item">
+                                    <div class="arrivals__box">
+                                        <img src="./app/images/img-threeitems-model-3.jpg" alt="" class="arrivals__image">
+                                        <div class="arrivals__more">
+                                            <div>
+                                                <span class="arrivals__more-add arrivals__zoom">zoom</span>
+                                                <span class="arrivals__more-add arrivals__view">view</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="arrivals__link">Berry lace Dress</a>
+                                    <div class="arrivals__price">
+                                        <span class="arrivals__price-money">$29.00</span>
+                                        <button class="arrivals__price-btn">add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="twoitems">
+                <div class="container">
+                    <div class="twoitems__wrapper">
+                        <div class="twoitems__container">
+                            <h2 class="twoitems__title arrivals__title">Two Items</h2>
+                            <div class="arrivals__list">
+                                <div class="twoitems__box arrivals__item">
+                                    <div class="arrivals__box">
+                                        <img src="./app/images/img-twoitems-model-1.jpg" alt="" class="arrivals__image">
+                                        <div class="arrivals__more">
+                                            <div>
+                                                <span class="arrivals__more-add arrivals__zoom">zoom</span>
+                                                <span class="arrivals__more-add arrivals__view">view</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="arrivals__link">Berry lace Dress</a>
+                                    <div class="arrivals__price">
+                                        <span class="arrivals__price-money">$29.00</span>
+                                        <button class="arrivals__price-btn">add to cart</button>
+                                    </div>
+                                    <img src="./app/images/img-arrivals-sale.png" alt="" class="arrivals__sale">
+                                </div>
+                                <div class="twoitems__box arrivals__item">
+                                    <div class="arrivals__box">
+                                        <img src="./app/images/img-twoitems-model-2.jpg" alt="" class="arrivals__image">
+                                        <div class="arrivals__more">
+                                            <div>
+                                                <span class="arrivals__more-add arrivals__zoom">zoom</span>
+                                                <span class="arrivals__more-add arrivals__view">view</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="arrivals__link">Berry lace Dress</a>
+                                    <div class="arrivals__price">
+                                        <span class="arrivals__price-money">$29.00</span>
+                                        <button class="arrivals__price-btn">add to cart</button>
+                                    </div>
+                                    <img src="./app/images/img-arrivals-new.png" alt="" class="arrivals__new">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="twoitems__slider">
+                            <div class="twoitems__item">
+                                <img src="./app/images/img-twoitems-slide-1.jpg" alt="">
+                            </div>
+                            <div class="twoitems__item">
+                                <img src="./app/images/img-twoitems-slide-2.jpg" alt="">
+                            </div>
+                            <div class="twoitems__item">
+                                <img src="./app/images/img-twoitems-slide-3.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="twoitems__brand">
+                        <div class="twoitems__image">
+                            <img src="./app/images/img-twoitems-brand-1.jpg" alt="">
+                        </div>
+                        <div class="twoitems__image">
+                            <img src="./app/images/img-twoitems-brand-2.jpg" alt="">
+                        </div>
+                        <div class="twoitems__image">
+                            <img src="./app/images/img-twoitems-brand-3.jpg" alt="">
+                        </div>
+                        <div class="twoitems__image">
+                            <img src="./app/images/img-twoitems-brand-4.jpg" alt="">
+                        </div>
+                        <div class="twoitems__image">
+                            <img src="./app/images/img-twoitems-brand-5.jpg" alt="">
+                        </div>
+                        <div class="twoitems__image">
+                            <img src="./app/images/img-twoitems-brand-6.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="contact">
+                <div class="container">
+                    <div class="contact__wrapper">
+                        <div class="contact__item">
+                            <div class="contact__image">
+                                <i class="contact__icon fas fa-shipping-fast"></i>
+                            </div>
+                            <div class="contact__info">
+                                <h2 class="contact__title">Free Shipping</h2>
+                                <h3 class="contact__desc">Express delivery withing 3 days</h3>
+                            </div>
+                        </div>
+                        <div class="contact__next">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                        <div class="contact__item">
+                            <div class="contact__image">
+                                <i class="contact__icon fas fa-gift"></i>
+                            </div>
+                            <div class="contact__info">
+                                <h2 class="contact__title">Daily Gifts</h2>
+                                <h3 class="contact__desc">3 gifts daily for lucky customers</h3>
+                            </div>
+                        </div>
+                        <div class="contact__next">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                        <div class="contact__item">
+                            <div class="contact__image">
+                                <i class="contact__icon fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact__info">
+                                <h2 class="contact__title">0919293949</h2>
+                                <h3 class="contact__desc">24/7 customers care available</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <div class="footer__box">
+                        <h2 class="footer__title">About us</h2>
+                        <p class="footer__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, porro quod iusto ratione repudiandae impedit corrupti eligendi veniam at dignissimos. Consequuntur id excepturi nam velit consectetur itaque odit quis temporibus!</p>
+                    </div>
+                    <div class="footer__box">
+                        <h2 class="footer__title">Information</h2>
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    <i class="fas fa-angle-right"></i>
+                                    Delivery Information
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    <i class="fas fa-angle-right"></i>
+                                    Customer Service
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    <i class="fas fa-angle-right"></i>
+                                    Order Tracking
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    <i class="fas fa-angle-right"></i>
+                                    Shipping & Returns
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    <i class="fas fa-angle-right"></i>
+                                    Contact Us
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    <i class="fas fa-angle-right"></i>
+                                    Careers
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#" class="footer__link">
+                                    <i class="fas fa-angle-right"></i>
+                                    Payment Methods
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__box">
+                        <h2 class="footer__title">Social Network</h2>
+                        <ul class="footer__social">
+                            <li class="footer__icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </li>
+                            <li class="footer__icon">
+                                <i class="fab fa-youtube"></i>
+                            </li>
+                            <li class="footer__icon">
+                                <i class="fab fa-instagram"></i>
+                            </li>
+                            <li class="footer__icon">
+                                <i class="fab fa-twitter"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__box">
+                        <h2 class="footer__title">Our Contact</h2>
+                        <h3 class="footer__info">19 Lincoln, California, US</h3>
+                        <h3 class="footer__info">Phone: 300 323 3456</h3>
+                        <h3 class="footer__info">Fax: 300 323 1456</h3>
+                        <h3 class="footer__info">Email: <a href="#">info@metronic.com</a></h3>
+                        <h3 class="footer__info">skype: <a href="#">metronic</a></h3>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="./app/js/main.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="slick/slick.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    </div>
+</body>
+</html>

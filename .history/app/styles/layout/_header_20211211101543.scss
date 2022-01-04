@@ -1,0 +1,17 @@
+.header {
+    &__top {
+        @include flexBox(stretch, space-between);
+    }
+    &__info { 
+        &-list {
+            @include flexBox(stretch, center);
+        }
+        &-item {
+            
+        }
+        &-box {
+            display: none;
+        }
+    }
+    
+}

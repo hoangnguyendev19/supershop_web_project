@@ -1,0 +1,80 @@
+@mixin size($width, $height: $width){
+	width: $width;
+	height: $height;
+}
+
+@mixin flexBox($align-items: stretch, $justify-content: flex-start, $flex-direction: row, $wrap: nowrap, $flex: flex) {
+	display: $flex;
+	justify-content: $justify-content;
+	align-items: $align-items;
+	flex-direction: $flex-direction;
+	flex-wrap: $wrap;
+}
+
+@mixin maxWidth($max-width) {
+	@media screen and (max-width: $max-width){
+		@content;
+	}
+}
+@mixin minWidth($min-width) {
+	@media screen and (min-width: $min-width){
+		@content;
+	}
+}
+
+// textClamp
+@mixin textClamp($row: 1, $size: 100%) {
+    display: -webkit-box;
+    -webkit-line-clamp: $row;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: $size;
+    max-width: $size;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+// menuRibbon
+@mixin menuRibbon($top: 0, $left: 0, $translateY, $z-index: 1) {
+	content: "";
+	position: absolute;
+	top: $top;
+	left: $left;
+	transform: translateY($translateY);
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-bottom: 7px solid $primary-color;
+	z-index: $z-index;
+}
+
+// trickHover
+@mixin trickHover($width: 100%, $height: 3rem, $translateY: -3rem, $index: 6) {
+	content: "";
+	position: absolute;
+	@include size($width, $height);
+	top: 0;
+	left: 0;
+	background-color: red;
+	transform: translateY($translateY);
+	z-index: $index;
+}
+
+// absoluteCenter
+@mixin absoluteCenter($index: both, $position: absolute) {
+	position: $position;
+	@if $index == "left" {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	@if $index == "top" {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	@if $index == "both" {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+	

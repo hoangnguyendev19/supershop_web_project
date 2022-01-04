@@ -1,0 +1,114 @@
+.banner {
+    &__slider {
+        @include size(100%, auto);
+        position: relative;
+        .slick-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 3rem;
+            border: 0;
+            outline: 0;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            color: white;
+            padding: 1rem 1.5rem;
+            transition: all 0.25s linear;
+            z-index: 9;
+        }
+        .slick-next {
+            right: 5rem;
+        }
+        .slick-prev {
+            left: 5rem;
+        }
+        .slick-arrow:hover {
+            background-color: white;
+            color: black;
+        }
+    }
+    &__item {
+        img {
+            width: 100vw;
+        }
+        &-designed {
+            position: relative;
+        }
+        &-content {
+            position: absolute;
+            top: 10rem;
+            left: 22.5rem;
+            @include size(62rem, auto);
+            z-index: 6;
+            text-align: center;
+            h1 {
+                color: white;
+                font-size: 6rem;
+                line-height: 1.2;
+                text-transform: uppercase;
+                border-bottom: 1px solid white;
+                padding-bottom: 2rem;
+                margin-bottom: 2rem;
+            }
+            span {
+                color: $primary-color;
+                display: inline-block;
+            }
+            p {
+                color: white;
+                font-size: 2.3rem;
+                line-height: 1.4;
+            }
+        }
+        &-unlimited {
+            position: relative;
+        }
+        &-sale {
+            position: absolute;
+            top: 10rem;
+            left: 18rem;
+            @include size(50rem, auto);
+            z-index: 6;
+            text-align: center;
+            h2 {
+                font-size: 10rem;
+                color: white;
+                margin-bottom: 1rem;
+                font-weight: 400;
+            }
+            h4 {
+                font-size: 2.3rem;
+                color: white;
+                margin-bottom: 1rem;
+                font-weight: 400;
+            }
+            h3 {
+                font-size: 4.5rem;
+                color: white;
+                margin-bottom: 1rem;
+                font-weight: 400;
+            }
+        }
+        &-sale-off {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(100%, -50%);
+            background-color: $primary-color;
+            @include size(18rem);
+            @include flexBox(center, center, column);
+            border-radius: 50%;
+            z-index: 5;
+            h3 {
+                font-size: 2rem;
+                font-weight: 400;
+            }
+            span {
+                display: inline-block;
+                font-size: 6rem;
+                font-weight: 400;
+                margin-left: 1rem;
+            }
+        }
+    }
+}

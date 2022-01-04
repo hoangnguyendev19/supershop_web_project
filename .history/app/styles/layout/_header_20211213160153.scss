@@ -1,0 +1,333 @@
+.header {
+    position: relative;
+    &__top {
+        padding: 1rem 0;
+        @include flexBox(stretch, space-between);
+    }
+    &__top::after {
+        content: "";
+        position: absolute;
+        top: 3.4rem;
+        right: 0;
+        left: 0;
+        border-bottom: 1px solid $border-color;
+        z-index: -1;
+    }
+    &__info { 
+        &-list {
+            @include flexBox(stretch, center);
+        }
+        &-item {
+            position: relative;
+            padding: 0 1.5rem;
+            transition: all 0.25s linear;
+            i {
+                color: $third-color;
+            }
+            span {
+                font-family: $secondary-font;
+                font-weight: 400;
+                color: $third-color;
+                font-size: 1.3rem;
+            }
+        }
+        &-item:not(:last-child) {
+            border-right: 1px solid $third-color;
+        }
+        &-language {
+            color: $third-color;
+            font-size: 1.3rem;
+            font-family: $secondary-font;
+            font-weight: 400;
+            display: inline-block;
+            transition: all 0.25s linear;
+        }
+        &-language:hover {
+            color: $primary-color;
+        }
+        &-money {
+            color: $third-color;
+            font-size: 1.3rem;
+            font-family: $secondary-font;
+            font-weight: 400;
+            transition: all 0.25s linear;
+        }
+        &-money:not(:last-child) {
+            margin-right: 5px;
+        }
+        &-money:hover {
+            color: $primary-color;
+        }
+        &--red {
+            color: $primary-color;
+        }
+        &-box {
+            background-color: $border-color;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            transform: translateY(10px);
+            visibility: hidden;
+            opacity: 0;
+            z-index: 9;
+        }
+        &-box::after {
+            @include menuRibbon(0, 15%, -6px, 9);
+        }
+        &-box::before {
+            content: "";
+            position: absolute;
+            height: 1rem;
+            background-color: transparent;
+            transform: translateY(-100%);
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 7;
+        }
+        &-item:hover .header__info-box {
+            visibility: visible;
+            opacity: 1;
+        }
+        &-other {
+            font-family: $secondary-font;
+            color: $third-color;
+            font-size: 1.3rem;
+            font-weight: 500;
+            padding: 1rem 1.5rem;
+            display: block;
+            transition: all 0.25s linear;
+        }
+        &-box li:first-child {
+            border-top: 1px solid $primary-color;
+            cursor: pointer;
+        }
+        &-other:hover {
+            color: white;
+            background-color: $primary-color;
+        }
+    }
+    &__user {
+        &-list {
+            @include flexBox(stretch, center);
+        }
+        &-item {
+            padding: 0 1.5rem;
+        }
+        &-item:not(:last-child) {
+            border-right: 2px solid $third-color;
+        }
+        &-link {
+            font-family: $secondary-font;
+            font-weight: 400;
+            display: inline-block;
+            font-size: 1.3rem;
+            color: $third-color;
+        }
+        &-link:hover {
+            color: $primary-color;
+        }
+    }
+    &__bottom {
+        @include flexBox(center, space-between);
+        padding: 2rem 0;
+    }
+    &__menu {
+        @include flexBox(center, center);
+        position: relative;
+        &-item {
+            padding: 1rem;
+            position: relative;
+        }
+        &-item:hover .header__menu-list {
+            visibility: visible;
+            opacity: 1;
+        }
+        &-item:hover .header__menu-link {
+            color: $primary-color;
+        }
+        &-link {
+            font-family: $secondary-font;
+            font-size: 2rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: $third-color;
+            display: inline-block;
+        }
+        &-icon {
+            font-size: 1.5rem;
+            color: $third-color;
+            padding: 1rem 1.5rem;
+            margin-left: 1.5rem;
+            border-left: 2px solid $border-color;
+            cursor: pointer;
+        }
+        &-list {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            transform: translateY(20px);
+            @include size(180px, auto);
+            transition: transform 0.25s ease-in;
+            background-color: white;
+            visibility: hidden;
+            opacity: 0;
+            z-index: 9;
+        }
+        &-list::before {
+            content: "";
+            position: absolute;
+            height: 2rem;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: transparent;
+            transform: translateY(-2rem);
+            z-index: 6;
+        }
+        &-list::after {
+            @include menuRibbon(0, 15px, -7px, 9);
+        }
+        &-box {
+            padding: 1rem 1.5rem;
+            transition: all 0.25s linear;
+            cursor: pointer;
+        }
+        &-box:first-child {
+            border-top: 1px solid $primary-color;
+        }
+        &-box:hover {
+            background-color: $primary-color;
+        }
+        &-box:hover a {
+            color: white;
+        }
+        &-boxes {
+            @include flexBox(center, space-between);
+            position: relative;
+            i {
+                color: $third-color;
+            }
+            ul {
+                position: absolute;
+                top: 0;
+                left: 0;
+                @include size(180px, auto);
+                transform: translate(100%, 100%);
+                transition: transform 0.4s ease-in;
+                background-color: #ccc;
+                visibility: hidden;
+                opacity: 0;
+            }
+            li {
+                padding: 1rem 1.5rem;
+                background-color: white;
+                a.header__menu-linking {
+                    font-size: 1.3rem;
+                    color: $third-color;
+                    display: inline-block;
+                }
+            }
+            li:hover {
+                background-color: $primary-color;
+                a.header__menu-linking {
+                    color: white;
+                }
+            }
+        }
+        &-boxes:hover i{
+            color: white;
+        }
+        &-boxes:hover {
+            ul {
+                transform: translate(100%, 0);
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+        &-linked {
+            font-family: $secondary-font;
+            color: $third-color;
+            font-size: 1.3rem;
+            font-weight: 500;
+            display: block;
+            transition: all 0.25s linear;
+            display: block;
+        }
+        &-item {
+            position: unset;
+        }
+        &-category {
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include size(100%, auto);
+            transform: translateY(6rem);
+            background-color: white;
+            padding: 2rem 2.5rem;
+            // visibility: hidden;
+            // opacity: 0;
+            z-index: 9;
+            ul {
+                @include flexBox(stretch, space-between);
+            }
+            li {
+                width: 25%;
+            }
+            span {
+                display: block;
+                color: $text-color;
+                font-size: 1.6rem;
+                font-family: $secondary-font;
+                font-weight: 600;
+                text-transform: uppercase;
+                padding: 1rem;
+                border-bottom: 1px solid $border-color;
+            }
+            a {
+                display: block;
+                font-size: 1.3rem;
+                color: $third-color;
+                padding: 1rem;
+            }
+            a:hover {
+                color: white;
+                background-color: $primary-color;
+            }
+        }
+    }
+    &__buy {
+        background-color: #f9f9f9;
+        padding: 8px 4rem 8px 1rem;
+        border-radius: 3rem;
+        border: 1px solid $border-color;
+        position: relative;
+        &-link {
+            color: $third-color;
+            font-size: 1.3rem;
+            padding-right: 1rem;
+            display: inline-block;
+            transition: all 0.25s linear;
+        }
+        &-link:first-child {
+            margin-right: 1rem;
+            border-right: 1px solid #ccc;
+        }
+        &-link:hover {
+            color: $primary-color;
+        }
+        &-icon {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            transform: scale(1.2, 1.2);
+            font-size: 1.3rem;
+            color: white;
+            padding: 1rem;
+            background-color: $primary-color;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    }
+}

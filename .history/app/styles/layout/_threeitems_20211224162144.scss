@@ -1,0 +1,14 @@
+.threeitems {
+    background-color: $bg-color;
+    padding: 3rem 0;
+    &__wrapper {
+        @include flexBox();
+    }
+    &__sidebar {
+        width: 30%;
+    }
+    &__container {
+        width: calc(70% - 3rem);
+        margin-left: 3rem;
+    }
+}

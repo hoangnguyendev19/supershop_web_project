@@ -1,0 +1,33 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+ul,li {
+    list-style: none;
+}
+body {
+    font-family: $primary-font;
+    line-height: 1;
+    font-size: 1.4rem;
+}
+input, button,textarea {
+    font-family: $secondary-font;
+    line-height: 1;
+    outline: none;
+}
+.wrapper {
+    max-width: $wrapper;
+    margin: 0 auto;
+}
+.container {
+    max-width: $container + 30px;
+    margin: 0 auto;
+    padding: 0 15px;
+}

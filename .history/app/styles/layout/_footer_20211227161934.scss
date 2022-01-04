@@ -1,0 +1,17 @@
+.footer {
+    background-color: #313030;
+    padding: 5rem 0;
+    &__wrapper {
+        @include flexBox(flex-start, space-between);
+    }
+    &__box {
+        width: calc(25% - 1.5rem);
+    }
+    &__title {
+        font-size: 2.5rem;
+        font-weight: 500;
+        color: $text-desc-color;
+        text-transform: uppercase;
+        margin-bottom: 3rem;
+    }
+}
