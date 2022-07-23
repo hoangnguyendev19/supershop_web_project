@@ -1,54 +1,72 @@
-window.addEventListener("load", function() {
-    // Dropdown Language
-    const headerInfoOther = document.querySelectorAll(".header__info-other");
-    const headerInfoLanguage = document.querySelector(".header__info-language");
-    headerInfoOther.forEach(item => item.addEventListener("click", function(event) {
-        let text = headerInfoLanguage.textContent; 
-        headerInfoLanguage.textContent = event.target.textContent;
-        event.target.textContent = text;
-    }))
-    // Toggle-Cart
-    const headerBuyIcon = document.querySelector(".header__buy-icon");
-    const headerBuyCart = document.querySelector(".header__buy-cart");
-    headerBuyIcon.addEventListener("click", function() {
-        headerBuyCart.classList.toggle("is-show");
+window.addEventListener("load", function () {
+  // Dropdown Language
+  const headerInfoOther = document.querySelectorAll(".header__info-other");
+  const headerInfoLanguage = document.querySelector(".header__info-language");
+  headerInfoOther.forEach((item) =>
+    item.addEventListener("click", function (event) {
+      let text = headerInfoLanguage.textContent;
+      headerInfoLanguage.textContent = event.target.textContent;
+      event.target.textContent = text;
     })
-    document.addEventListener("click", function(event) {
-        if(!headerBuyCart.contains(event.target) && !event.target.matches(".header__buy-icon")) {
-            headerBuyCart.classList.remove("is-show");
-        }
-    })
-    // Toggle-Menu
-    const headerBarNav = document.querySelector(".header__bar-nav");
-    const headerBarMenu = document.querySelector(".header__bar-menu");
-    const headerBarClosed = document.querySelector(".header__bar-closed");
-    headerBarNav.addEventListener("click", function() {
-        headerBarMenu.classList.add("is-active");
-    })
-    headerBarClosed.addEventListener("click", function() {
-        headerBarMenu.classList.remove("is-active");
-    })
-    document.addEventListener("click", function(event) {
-        if(!headerBarMenu.contains(event.target) && !event.target.matches(".header__bar-nav")) {
-            headerBarMenu.classList.remove("is-active");
-        }
-    })
-    // Slick Slider
-    $(document).ready(function(){
-        $('.banner__slider').slick({
-            dots: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa fa-chevron-left' aria-hidden='true'></i></button>",
-            nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-chevron-right' aria-hidden='true'></i></button>"
-        });
+  );
+
+  // Toggle-Cart
+  const headerBuyIcon = document.querySelector(".header__buy-icon");
+  const headerBuyCart = document.querySelector(".header__buy-cart");
+  headerBuyIcon.addEventListener("click", function () {
+    headerBuyCart.classList.toggle("is-show");
+  });
+  document.addEventListener("click", function (event) {
+    if (
+      !headerBuyCart.contains(event.target) &&
+      !event.target.matches(".header__buy-icon")
+    ) {
+      headerBuyCart.classList.remove("is-show");
+    }
+  });
+
+  // Toggle-Menu
+  const headerBarNav = document.querySelector(".header__bar-nav");
+  const headerBarMenu = document.querySelector(".header__bar-menu");
+  const headerBarClosed = document.querySelector(".header__bar-closed");
+  headerBarNav.addEventListener("click", function () {
+    headerBarMenu.classList.add("is-active");
+  });
+  headerBarClosed.addEventListener("click", function () {
+    headerBarMenu.classList.remove("is-active");
+  });
+  document.addEventListener("click", function (event) {
+    if (
+      !headerBarMenu.contains(event.target) &&
+      !event.target.matches(".header__bar-nav")
+    ) {
+      headerBarMenu.classList.remove("is-active");
+    }
+  });
+
+  // Slick Slider
+  $(document).ready(function () {
+    $(".banner__slider").slick({
+      dots: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      prevArrow:
+        "<button type='button' class='slick-prev pull-left'><i class='fa fa-chevron-left' aria-hidden='true'></i></button>",
+      nextArrow:
+        "<button type='button' class='slick-next pull-right'><i class='fa fa-chevron-right' aria-hidden='true'></i></button>",
     });
-    // Modal Zoom
-    const arrivals = document.querySelector(".arrivals");
-    const modalZoom = document.querySelectorAll(".arrivals__zoom");
-    modalZoom.forEach(item => item.addEventListener("click", function(event) {
-        let src = event.target.parentNode.parentNode.previousElementSibling.getAttribute("src");
-        const templateZoom = `
+  });
+
+  // Modal Zoom
+  const arrivals = document.querySelector(".arrivals");
+  const modalZoom = document.querySelectorAll(".arrivals__zoom");
+  modalZoom.forEach((item) =>
+    item.addEventListener("click", function (event) {
+      let src =
+        event.target.parentNode.parentNode.previousElementSibling.getAttribute(
+          "src"
+        );
+      const templateZoom = `
         <div class="modal">
             <div class="modal__content">
                 <i class="fa fa-times modal__close"></i>
@@ -56,21 +74,28 @@ window.addEventListener("load", function() {
             </div>
         </div>
         `;
-        arrivals.insertAdjacentHTML("beforeend", templateZoom);
-    }));
-    document.body.addEventListener("click", function(event) {
-        if(event.target.matches(".modal__close")) {
-            const modal = event.target.parentNode.parentNode;
-            modal.parentNode.removeChild(modal);
-        } else if(event.target.matches(".modal")) {
-            event.target.parentNode.removeChild(event.target);
-        }
+      arrivals.insertAdjacentHTML("beforeend", templateZoom);
     })
-    // Modal View
-    const arrivalsView = document.querySelectorAll(".arrivals__view");
-    arrivalsView.forEach(item => item.addEventListener("click", function(event) {
-        let image = event.target.parentNode.parentNode.previousElementSibling.getAttribute("src");
-        const templateView = `
+  );
+
+  document.body.addEventListener("click", function (event) {
+    if (event.target.matches(".modal__close")) {
+      const modal = event.target.parentNode.parentNode;
+      modal.parentNode.removeChild(modal);
+    } else if (event.target.matches(".modal")) {
+      event.target.parentNode.removeChild(event.target);
+    }
+  });
+
+  // Modal View
+  const arrivalsView = document.querySelectorAll(".arrivals__view");
+  arrivalsView.forEach((item) =>
+    item.addEventListener("click", function (event) {
+      let image =
+        event.target.parentNode.parentNode.previousElementSibling.getAttribute(
+          "src"
+        );
+      const templateView = `
         <div class="view">
             <div class="view__content">
                 <i class="fa fa-times view__close"></i>
@@ -136,79 +161,91 @@ window.addEventListener("load", function() {
                 </div>
             </div>
         </div>`;
-        arrivals.insertAdjacentHTML("beforeend", templateView);
-        // Counter
-        const viewInfoIncrease = document.querySelector(".view__info-increase");
-        const viewInfoDecrease = document.querySelector(".view__info-decrease");
-        const viewInfoNumber = document.querySelector(".view__info-number");
-        let countValue = parseInt(viewInfoNumber.textContent);
-        viewInfoIncrease.addEventListener("click", function() {
-            if (countValue == 20) return 20;
-            countValue++;
-            viewInfoNumber.textContent = countValue;
+      arrivals.insertAdjacentHTML("beforeend", templateView);
+
+      // Counter
+      const viewInfoIncrease = document.querySelector(".view__info-increase");
+      const viewInfoDecrease = document.querySelector(".view__info-decrease");
+      const viewInfoNumber = document.querySelector(".view__info-number");
+      let countValue = parseInt(viewInfoNumber.textContent);
+      viewInfoIncrease.addEventListener("click", function () {
+        if (countValue == 20) return 20;
+        countValue++;
+        viewInfoNumber.textContent = countValue;
+      });
+      viewInfoDecrease.addEventListener("click", function () {
+        if (countValue == 0) return 0;
+        countValue--;
+        viewInfoNumber.textContent = countValue;
+      });
+
+      // Dropdown Size
+      const optionSize = document.querySelector(".option__size");
+      const listSize = document.querySelector(".list__size");
+      const itemSize = document.querySelectorAll(".item__size");
+      const viewSize = document.querySelector(".view__size");
+      optionSize.addEventListener("click", function () {
+        listSize.classList.toggle("is-appear");
+      });
+      itemSize.forEach((item) =>
+        item.addEventListener("click", function (event) {
+          const text = viewSize.textContent;
+          viewSize.textContent = event.target.textContent;
+          event.target.textContent = text;
         })
-        viewInfoDecrease.addEventListener("click", function() {
-            if(countValue == 0) return 0;
-            countValue--;
-            viewInfoNumber.textContent = countValue;
+      );
+
+      // Dropdown Color
+      const optionColor = document.querySelector(".option__color");
+      const listColor = document.querySelector(".list__color");
+      const itemColor = document.querySelectorAll(".item__color");
+      const viewColor = document.querySelector(".view__color");
+      optionColor.addEventListener("click", function () {
+        listColor.classList.toggle("is-appear");
+      });
+      itemColor.forEach((item) =>
+        item.addEventListener("click", function (event) {
+          const text = viewColor.textContent;
+          viewColor.textContent = event.target.textContent;
+          event.target.textContent = text;
         })
-        // Dropdown Size
-        const optionSize = document.querySelector(".option__size");
-        const listSize = document.querySelector(".list__size");
-        const itemSize = document.querySelectorAll(".item__size");
-        const viewSize = document.querySelector(".view__size");
-        optionSize.addEventListener("click", function() {
-            listSize.classList.toggle("is-appear");
-        });
-        itemSize.forEach(item => item.addEventListener("click", function(event) {
-            const text = viewSize.textContent;
-            viewSize.textContent = event.target.textContent;
-            event.target.textContent = text;
-        }));
-        // Dropdown Color
-        const optionColor = document.querySelector(".option__color");
-        const listColor = document.querySelector(".list__color");
-        const itemColor = document.querySelectorAll(".item__color");
-        const viewColor = document.querySelector(".view__color");
-        optionColor.addEventListener("click", function() {
-            listColor.classList.toggle("is-appear");
-        });
-        itemColor.forEach(item => item.addEventListener("click", function(event) {
-            const text = viewColor.textContent;
-            viewColor.textContent = event.target.textContent;
-            event.target.textContent = text;
-        }));
-    }));
-    document.body.addEventListener("click", function(event) {
-        const view = document.querySelector(".view");
-        if(event.target.matches(".view__close")) {
-            view.parentNode.removeChild(view);
-        } else if(event.target.matches(".view")) {
-            view.parentNode.removeChild(view);
-        }
+      );
     })
-    // Accordion 
-    const threeItems = document.querySelectorAll(".threeitems__item");
-    threeItems.forEach(item => item.addEventListener("click", function(event) {
-        const content = event.target.nextElementSibling;
-        content.classList.toggle("active");
-        if(content.classList.contains("active")) {
-            content.style.height = `${content.scrollHeight}px`;
-        } else {
-            content.style.height = `0px`;
-        }
-        const threeIcon = event.target.querySelector(".threeitems__icon");
-        threeIcon.classList.toggle("fa-angle-right");
-        threeIcon.classList.toggle("fa-angle-down");
-    })) 
-    // Slider Twoitems
-    $('.twoitems__slider').slick({
-        dots: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 1500,
-        prevArrow: false,
-        nextArrow: false,
-    });
-})
+  );
+  document.body.addEventListener("click", function (event) {
+    const view = document.querySelector(".view");
+    if (event.target.matches(".view__close")) {
+      view.parentNode.removeChild(view);
+    } else if (event.target.matches(".view")) {
+      view.parentNode.removeChild(view);
+    }
+  });
+
+  // Accordion
+  const threeItems = document.querySelectorAll(".threeitems__item");
+  threeItems.forEach((item) =>
+    item.addEventListener("click", function (event) {
+      const content = event.target.nextElementSibling;
+      content.classList.toggle("active");
+      if (content.classList.contains("active")) {
+        content.style.height = `${content.scrollHeight}px`;
+      } else {
+        content.style.height = `0px`;
+      }
+      const threeIcon = event.target.querySelector(".threeitems__icon");
+      threeIcon.classList.toggle("fa-angle-right");
+      threeIcon.classList.toggle("fa-angle-down");
+    })
+  );
+
+  // Slider Twoitems
+  $(".twoitems__slider").slick({
+    dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1500,
+    prevArrow: false,
+    nextArrow: false,
+  });
+});
